@@ -8,7 +8,7 @@
     "dev": "supervisor ./bin/www",
     "server1": "node ./bin/www",
     "server2": "http-server ./public/dist -p 80",
-    "server3": "node ./bin/www && http-server ./public/dist -p 80"
+    "server3": "node ./bin/www && http-server ./public/dist"
   },
   "keywords": [
     "porco",
