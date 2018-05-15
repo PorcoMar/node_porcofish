@@ -1,1 +1,21 @@
-"<!DOCTYPE>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>second</title>\n\t<style>\n\t\t.pp{\n\t\t\twidth:100px;height:100px;border:1px solid #000;\n\t\t\toverflow:hidden;\n\t\t\tfloat:left;\n\t\t\tdisplay:flex;\n\t\t\tflex-direction: column;justify-content: center;align-items: center;\n\t\t}\n\t\t.pp img{\n\t\t\twidth:50px;\n\t\t\theight:50px;\n\t\t\tborder:1px dashed red;\n\t\t}\n\t</style>\n</head>\n<body>\n\tthis is <%= name %> , list is : \n\t<% for(var i in list){%>\n\t\t<p class=\"pp\">\n\t\t\t<i style=\"color:<%- list[i].color %>\"><%- list[i].name %></i>\n\t\t\t<img src=\"<%- list[i].img %>\"/>\n\t\t</p>\n\t<% }%>\n</body>\n</html>"
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="full-screen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <title>porcofish.net</title>
+    <link rel="stylesheet" href="./static/reset.css">
+    <link href="https://gitee.com/uploads/6/1023506_PorcoMar.png?1500276509" rel="shortcut icon">
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+
