@@ -2,7 +2,7 @@
 * @Author: Porco_Mar
 * @Date:   2018-05-12 11:29:09
  * @Last Modified by: PorcoMar
- * @Last Modified time: 2018-05-13 20:44:18
+ * @Last Modified time: 2018-05-15 13:31:26
 */
 var express = require('express');
 var app = express();
@@ -14,7 +14,7 @@ const indexRoute = require("./app/routes/index.route");
 const userInfo = require('./app/routes/userInfo')
 
 /*配置静态文件路径*/
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public/dist")));
 //使用ejs模板   /*这里写了使用ejs模板渲染也可以用html格式的，或者再变成html模板渲染也可以
 app.set('views', path.join(__dirname, 'app/views'));
 // app.set('view engine', 'ejs');

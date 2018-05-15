@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "supervisor ./bin/www",
     "server1": "node ./bin/www",
-    "server2": "http-server ./public/dist -p 80",
-    "server3": "node ./bin/www && http-server ./public/dist"
+    "server2": "http-server ./public/dist -p 80"
   },
   "keywords": [
     "porco",

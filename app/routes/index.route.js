@@ -2,7 +2,7 @@
 * @Author: Porco_Mar
 * @Date:   2018-05-12 14:44:24
  * @Last Modified by: PorcoMar
- * @Last Modified time: 2018-05-14 18:05:39
+ * @Last Modified time: 2018-05-15 13:22:01
 */
 const express = require('express');
 const router = express.Router();
@@ -19,16 +19,16 @@ router.get('/index/:id', function (req, res, next) {
 	console.log('originalUrl = '+ req.originalUrl); // '/index/new'
   console.log('baseUrl = '+ req.baseUrl); // '/index'
 	console.log('path = '+ req.path); // '/new'
-	fs.writeFileSync('./config/file.json', JSON.stringify([{"title": "porco----"}]))
 	res.send(req.path);
 });
 
-router.get('/second', (req, res) => {
+router.get('/mockList', (req, res) => {
 	// res.send('this is seond')
 	console.log('---------------------------------->/second')
 	let list = require('../workJS/mock.js').mock
 		list().then(resA => {
 			console.log(resA.list)
+			fs.writeFileSync('./config/file.json', JSON.stringify([{"list": resA.list}]))
 			res.render('second', {name:'second.ejs', list: resA.list})
 			// content = ejs.render('../views/second.html', resA.list);
 			// fs.writeFileSync('public/second.html', content);
